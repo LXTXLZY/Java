@@ -1,0 +1,21 @@
+package name;
+public class 质数 {
+public static void main(String[] args){
+	//打印质数
+	boolean flag=true;
+	long begin=System.currentTimeMillis();
+	for(int a=2;a<=100;a++){
+		flag=true;
+		//从2循环到a-1，检验是否为a的因数
+		//循环到原数开方，避免重复
+		for(int b=2;b<=Math.sqrt(a);b++){
+			if(a%b==0){flag=false;
+			break;
+			}
+		}
+	if(flag){System.out.println(a);}
+	}
+	long end=System.currentTimeMillis();
+	System.out.println("time:"+(end-begin));
+}
+}
